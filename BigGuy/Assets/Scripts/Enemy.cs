@@ -6,24 +6,31 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float stopToFire = 4f;
     [SerializeField] float stayForSoLong = 10f;
-    [SerializeField] float timer = 0f;
-    [SerializeField] Sprite projectile1;
-    [SerializeField] Sprite projectile2;
-    [SerializeField] Sprite projectile3;
-    [SerializeField] Sprite projectile4;
-    [SerializeField] Sprite projectile5;
-    [SerializeField] Sprite projectile6;
+    [SerializeField] float maxTimer = 0f;
+    [SerializeField] GameObject foodBullets;
 
-    // Use this for initialization
-    void Start ()
+    float timer;
+
+    //Start is called once at the start of the program
+    private void Start()
     {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+        timer = maxTimer;
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         timer -= Time.deltaTime;
 
+        if (timer <= 0)
+        {
+            timer = maxTimer;
+            FoodFight();
+        }
 	}
+
+    void FoodFight()
+    {
+
+    }
 }

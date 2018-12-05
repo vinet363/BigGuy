@@ -11,5 +11,10 @@ public class Bullet : MonoBehaviour
 	void Update ()
     {
         transform.position += new Vector3(speed, speed, 0f);
+
+        timeUntilDetonation -= Time.deltaTime;
+
+        if (timeUntilDetonation <= 0)
+            Destroy(gameObject);
 	}
 }

@@ -22,22 +22,13 @@ public class FatGuy : MonoBehaviour
     float xMove = 1f;
     float yMove = 1f;
     bool itsDead = false;
-    Direction direction = Direction.Right;
-
-    enum Direction
-    {
-        Right = 1,
-        Left = 2,
-        Down = 3,
-        Up = 4
-    }
 
     // Use this for initialization
     void Start ()
     {
         health = startingHealth;
         UpdateHealthBar();
-        float timer = maxTimer;
+        timer = maxTimer;
         
     }
 	
@@ -117,6 +108,14 @@ public class FatGuy : MonoBehaviour
         if (health <= 0 || health >= maxHealth)
         {
             SceneManager.LoadScene(4);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Food")
+        {
+            health += 5;
         }
     }
 }
