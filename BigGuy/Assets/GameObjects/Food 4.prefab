@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50161122269218722}
   - component: {fileID: 114929795086483020}
   m_Layer: 0
-  m_Name: Food
+  m_Name: Food 4
   m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,8 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47de367f94397f6489a5ab07d5e31f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
   timeUntilDetonation: 10
+  speed: {x: -1, y: 1}
 --- !u!212 &212032752974432460
 SpriteRenderer:
   m_ObjectHideFlags: 1

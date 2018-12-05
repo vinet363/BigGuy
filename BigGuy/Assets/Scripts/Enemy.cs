@@ -7,7 +7,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] float stopToFire = 4f;
     [SerializeField] float stayForSoLong = 10f;
     [SerializeField] float maxTimer = 0f;
-    [SerializeField] GameObject foodBullets;
+    [SerializeField] GameObject foodBullet1;
+    [SerializeField] GameObject foodBullet2;
+    [SerializeField] GameObject foodBullet3;
+    [SerializeField] GameObject foodBullet4;
+    [SerializeField] GameObject foodBullet5;
+    [SerializeField] GameObject foodBullet6;
 
     float timer;
 
@@ -31,6 +36,11 @@ public class Enemy : MonoBehaviour
 
     void FoodFight()
     {
-
+        Instantiate(foodBullet1, transform.position, Quaternion.identity);
+        Instantiate(foodBullet2, transform.position, Quaternion.identity);
+        Instantiate(foodBullet3, transform.position, Quaternion.identity);
+        Instantiate(foodBullet4, transform.position, Quaternion.identity);
+        Instantiate(foodBullet5, transform.position, Quaternion.identity);
+        Instantiate(foodBullet6, transform.position, Quaternion.identity);
     }
 }

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] float speed = 1f;
     [SerializeField] float timeUntilDetonation = 10f;
+    [SerializeField] Vector2 speed;
 
-	// Update is called once per frame
-	void Update ()
+    // Update is called once per frame
+    void Update ()
     {
-        transform.position += new Vector3(speed, speed, 0f);
+        transform.position += (speed);
 
         timeUntilDetonation -= Time.deltaTime;
 
