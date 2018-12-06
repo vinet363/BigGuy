@@ -23,6 +23,7 @@ public class FatGuy : MonoBehaviour
     float xMove = 1f;
     float yMove = 1f;
     bool itsDead = false;
+    Animator anim; // TA INTE BORT  ANIMATIONER GUBBE
 
     // Use this for initialization
     void Start ()
@@ -30,6 +31,7 @@ public class FatGuy : MonoBehaviour
         health = startingHealth;
         UpdateHealthBar();
         timer = maxTimer;
+        anim = GetComponent<Animator>(); // TA INTE BORT  ANIMATIONER GUBBE
     }
 	
 	// Update is called once per frame
@@ -61,6 +63,8 @@ public class FatGuy : MonoBehaviour
     {
         xMove = Input.GetAxisRaw("Horizontal");
         yMove = Input.GetAxisRaw("Vertical");
+        anim.SetFloat("Speed", Mathf.Abs(xMove)); // TA INTE BORT  ANIMATIONER GUBBE
+        anim.SetFloat("Speed", Mathf.Abs(yMove)); // TA INTE BORT  ANIMATIONER GUBBE
         Vector3 movements = new Vector3(xMove, yMove, 0f).normalized * Time.deltaTime * speed;
         transform.position += movements;
     }
