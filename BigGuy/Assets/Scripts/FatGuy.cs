@@ -8,6 +8,7 @@ public class FatGuy : MonoBehaviour
 {
     [SerializeField] int maxHealth = 10;
     [SerializeField] int startingHealth = 10;
+    [SerializeField] int scorePerSecond = 0;
     [SerializeField] float maxTimer = 1f; 
     [SerializeField] float speed = 0.1f;
     [SerializeField] float xMin = -3.5f;
@@ -29,7 +30,6 @@ public class FatGuy : MonoBehaviour
         health = startingHealth;
         UpdateHealthBar();
         timer = maxTimer;
-        
     }
 	
 	// Update is called once per frame
@@ -49,6 +49,9 @@ public class FatGuy : MonoBehaviour
 
         //Checks if you are dead
         Dead();
+
+        //Giving score to the player based on where the meter is
+        Score();
 
         if (Input.GetKeyDown(KeyCode.P))
             health = health + 5; 
@@ -107,8 +110,15 @@ public class FatGuy : MonoBehaviour
         //Check if the health is gone
         if (health <= 0 || health >= maxHealth)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene("Game_Over");
         }
+    }
+
+    void Score()
+    {
+        GameObject gameManager = GameObject.Find("GameManager");
+        GameManager gameManagerScript = gameManager.GetComponent<GameManager>();
+        gameManagerScript.AddScore(scorePerSecond);
     }
 
     private void OnTriggerEnter2D(Collider2D col)

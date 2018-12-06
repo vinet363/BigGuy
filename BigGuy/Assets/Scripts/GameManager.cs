@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] Text points;
-    [SerializeField] int scorePerSecond;
 
     int totalScore = 0;
 
@@ -16,6 +15,12 @@ public class GameManager : MonoBehaviour
     {
         points.text = totalScore.ToString();
 	}
+
+    public void AddScore(int score)
+    {
+        totalScore += score;
+        points.text = totalScore.ToString();
+    }
 	
 	// Update is called once per frame
 	void Update ()
