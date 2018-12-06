@@ -115,6 +115,7 @@ public class FatGuy : MonoBehaviour
     {
         if (col.gameObject.tag == "Food")
         {
+            Destroy(col.gameObject);
             health += 5;
         }
     }
