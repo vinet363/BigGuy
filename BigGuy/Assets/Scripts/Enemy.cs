@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] float stopToFire = 4f;
-    [SerializeField] float stayForSoLong = 10f;
     [SerializeField] float maxTimer = 0f;
+    [SerializeField] float selfDestruct = 7f;
     [SerializeField] GameObject foodBullet1;
     [SerializeField] GameObject foodBullet2;
     [SerializeField] GameObject foodBullet3;
