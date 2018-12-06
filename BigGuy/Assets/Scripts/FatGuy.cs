@@ -9,6 +9,7 @@ public class FatGuy : MonoBehaviour
     [SerializeField] int maxHealth = 10;
     [SerializeField] int startingHealth = 10;
     [SerializeField] int scorePerSecond = 0;
+    [SerializeField] float scoreTimer = 1f;
     [SerializeField] float maxTimer = 1f; 
     [SerializeField] float speed = 0.1f;
     [SerializeField] float xMin = -3.5f;
@@ -39,22 +40,29 @@ public class FatGuy : MonoBehaviour
     {
         //You can't play after you die
         if (itsDead == true)
-            return;
+        return;
+
+        timer -= Time.deltaTime;
+
         //Takes in the directions on the stick and moves the character accordingly
         Movement();
 
         //For making sure you don't go of screen
         StayOnScreen();
 
-        //Updates your hunger meter
-        Hunger();
+        if (timer <= 0)
+        {
+            //Updates your hunger meter
+            Hunger();
 
-        //Checks if you are dead
-        Dead();
+            timer = maxTimer;
+        }
 
         //Giving score to the player based on where the meter is
         Score();
 
+        //Checks if you are dead
+        Dead();
         if (Input.GetKeyDown(KeyCode.P))
             health = health + 5; 
     }
@@ -96,14 +104,7 @@ public class FatGuy : MonoBehaviour
     //The hunger bar shrinks with deltaTime
     void Hunger()
     {
-        timer -= Time.deltaTime;
-
-        if (timer <= 0)
-        {
             health = health - 1;
-
-            timer = maxTimer;
-        }
 
         UpdateHealthBar();
     }
@@ -120,9 +121,9 @@ public class FatGuy : MonoBehaviour
 
     void Score()
     {
-        GameObject gameManager = GameObject.Find("GameManager");
-        GameManager gameManagerScript = gameManager.GetComponent<GameManager>();
-        gameManagerScript.AddScore(scorePerSecond);
+            GameObject gameManager = GameObject.Find("GameManager");
+            GameManager gameManagerScript = gameManager.GetComponent<GameManager>();
+            gameManagerScript.AddScore(scorePerSecond);
     }
 
     private void OnTriggerEnter2D(Collider2D col)
