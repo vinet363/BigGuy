@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] float maxTimer = 0f;
+    [SerializeField] float shootTimer = 10f;
     [SerializeField] float selfDestruct = 7f;
     [SerializeField] GameObject foodBullet1;
     [SerializeField] GameObject foodBullet2;
@@ -18,19 +18,23 @@ public class Enemy : MonoBehaviour
     //Start is called once at the start of the program
     private void Start()
     {
-        timer = maxTimer;
+        timer = shootTimer;
     }
 
     // Update is called once per frame
     void Update ()
     {
         timer -= Time.deltaTime;
+        selfDestruct -= Time.deltaTime;
 
         if (timer <= 0)
         {
-            timer = maxTimer;
+            timer = shootTimer;
             FoodFight();
         }
+
+        if (selfDestruct <= 0)
+            Destroy(gameObject);
 	}
 
     void FoodFight()

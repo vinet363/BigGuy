@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4136506369591958}
   - component: {fileID: 212094520465917878}
   - component: {fileID: 50521486603989084}
-  - component: {fileID: 114774611674955362}
+  - component: {fileID: 114884720930178054}
   - component: {fileID: 114716157329762094}
   m_Layer: 0
   m_Name: Enemy
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
---- !u!114 &114774611674955362
+--- !u!114 &114884720930178054
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,9 +86,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9551ec95517ba48932c01a062adab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopToFire: 4
-  stayForSoLong: 10
-  maxTimer: 8
+  shootTimer: 2.3
+  selfDestruct: 12
   foodBullet1: {fileID: 1724141270401996, guid: 50315d9a51018944f91af53ebcd2d338,
     type: 2}
   foodBullet2: {fileID: 1724141270401996, guid: 9d54bb00e57a255449e037bffe847cda,

@@ -79,8 +79,8 @@ MonoBehaviour:
   speed: 15
   xMin: -3.5
   xMax: 3.5
-  yMin: -2
-  yMax: 2
+  yMin: -1.9
+  yMax: 1.9
   FoodBar: {fileID: 0}
   dead: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!212 &212274948755419744

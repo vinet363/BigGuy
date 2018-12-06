@@ -140,12 +140,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf077514e507e0d4abde45684dbd0883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 4
-  spawnMin: -2
-  spawnMax: 2
+  timer: 1
+  spawnMin: 4
+  spawnMax: 4
   Enemy1: {fileID: 1048776487042472, guid: 3ea55014218e484479f95ca1dfee6bde, type: 2}
-  SideWalk1: {x: -5, y: 6}
-  SideWalk2: {x: 5, y: 6}
+  SideWalk1: {x: -4.5, y: 6}
+  SideWalk2: {x: 4.5, y: 6}
 --- !u!4 &361483428
 Transform:
   m_ObjectHideFlags: 0
