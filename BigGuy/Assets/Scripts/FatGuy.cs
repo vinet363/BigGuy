@@ -9,6 +9,7 @@ public class FatGuy : MonoBehaviour
     [SerializeField] int maxHealth = 10;
     [SerializeField] int startingHealth = 10;
     [SerializeField] int scorePerSecond = 0;
+    [SerializeField] int multiplyer = 10;
     [SerializeField] float scoreTimer = 1f;
     [SerializeField] float maxTimer = 1f; 
     [SerializeField] float speed = 0.1f;
@@ -123,6 +124,14 @@ public class FatGuy : MonoBehaviour
     {
             GameObject gameManager = GameObject.Find("GameManager");
             GameManager gameManagerScript = gameManager.GetComponent<GameManager>();
+
+        if (health <= 4 && health >= 0)
+            gameManagerScript.AddScore(scorePerSecond * multiplyer);
+
+        else if (health >= maxHealth - 4 && health <= maxHealth)
+            gameManagerScript.AddScore(scorePerSecond * multiplyer);
+
+        else
             gameManagerScript.AddScore(scorePerSecond);
     }
 
