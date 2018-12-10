@@ -4,26 +4,46 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] float stopToFire = 4f;
-    [SerializeField] float stayForSoLong = 10f;
-    [SerializeField] float timer = 0f;
-    [SerializeField] Sprite projectile1;
-    [SerializeField] Sprite projectile2;
-    [SerializeField] Sprite projectile3;
-    [SerializeField] Sprite projectile4;
-    [SerializeField] Sprite projectile5;
-    [SerializeField] Sprite projectile6;
+    [SerializeField] float shootTimer = 10f;
+    [SerializeField] float selfDestruct = 7f;
+    [SerializeField] GameObject foodBullet1;
+    [SerializeField] GameObject foodBullet2;
+    [SerializeField] GameObject foodBullet3;
+    [SerializeField] GameObject foodBullet4;
+    [SerializeField] GameObject foodBullet5;
+    [SerializeField] GameObject foodBullet6;
 
-    // Use this for initialization
-    void Start ()
+    float timer;
+
+    //Start is called once at the start of the program
+    private void Start()
     {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+        timer = shootTimer;
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         timer -= Time.deltaTime;
+        selfDestruct -= Time.deltaTime;
 
+        if (timer <= 0)
+        {
+            timer = shootTimer;
+            FoodFight();
+        }
+
+        if (selfDestruct <= 0)
+            Destroy(gameObject);
 	}
+
+    void FoodFight()
+    {
+        Instantiate(foodBullet1, transform.position, Quaternion.identity);
+        Instantiate(foodBullet2, transform.position, Quaternion.identity);
+        Instantiate(foodBullet3, transform.position, Quaternion.identity);
+        Instantiate(foodBullet4, transform.position, Quaternion.identity);
+        Instantiate(foodBullet5, transform.position, Quaternion.identity);
+        Instantiate(foodBullet6, transform.position, Quaternion.identity);
+    }
 }

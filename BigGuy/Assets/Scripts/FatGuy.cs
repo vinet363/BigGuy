@@ -8,12 +8,17 @@ public class FatGuy : MonoBehaviour
 {
     [SerializeField] int maxHealth = 10;
     [SerializeField] int startingHealth = 10;
-    [SerializeField] float maxTimer = 1f; 
+    [SerializeField] int scorePerSecond = 0;
+    [SerializeField] int multiplyer = 10;
+    [SerializeField] float maxTimer = 1f;
+    [SerializeField] float deflectCooldown = 0.5f;
+    [SerializeField] float deflectTime = 0.5f;
     [SerializeField] float speed = 0.1f;
     [SerializeField] float xMin = -3.5f;
     [SerializeField] float xMax = 3.5f;
     [SerializeField] float yMin = -2f;
     [SerializeField] float yMax = 2f;
+    [SerializeField] GameObject prefabDeflect;
     [SerializeField] Image FoodBar;
     [SerializeField] Sprite dead;
 
@@ -21,24 +26,19 @@ public class FatGuy : MonoBehaviour
     float timer;
     float xMove = 1f;
     float yMove = 1f;
+    float deflectTimer;
+    float deflectCooldownTimer;
     bool itsDead = false;
-    Direction direction = Direction.Right;
-
-    enum Direction
-    {
-        Right = 1,
-        Left = 2,
-        Down = 3,
-        Up = 4
-    }
+    GameObject currentDeflect;
+    Animator anim; // TA INTE BORT  ANIMATIONER GUBBE
 
     // Use this for initialization
     void Start ()
     {
         health = startingHealth;
         UpdateHealthBar();
-        float timer = maxTimer;
-        
+        timer = maxTimer;
+        anim = GetComponent<Animator>(); // TA INTE BORT  ANIMATIONER GUBBE
     }
 	
 	// Update is called once per frame
@@ -46,29 +46,78 @@ public class FatGuy : MonoBehaviour
     {
         //You can't play after you die
         if (itsDead == true)
-            return;
+        return;
+
+        timer -= Time.deltaTime;
+
         //Takes in the directions on the stick and moves the character accordingly
         Movement();
+
+        if(Input.GetButtonDown("Fire1"))
+            Deflect();
 
         //For making sure you don't go of screen
         StayOnScreen();
 
-        //Updates your hunger meter
-        Hunger();
+
+        if (timer <= 0)
+        {
+            //Updates your hunger meter
+            Hunger();
+
+            timer = maxTimer;
+        }
+
+        //Giving score to the player based on where the meter is
+        Score();
 
         //Checks if you are dead
         Dead();
-
         if (Input.GetKeyDown(KeyCode.P))
-            health = health + 5; 
+            health = health + 5;
+
+        HandleDeflect();
     }
 
     void Movement()
     {
         xMove = Input.GetAxisRaw("Horizontal");
         yMove = Input.GetAxisRaw("Vertical");
+        anim.SetFloat("Speed", Mathf.Abs(xMove)); // TA INTE BORT  ANIMATIONER GUBBE
+        anim.SetFloat("Speed", Mathf.Abs(yMove)); // TA INTE BORT  ANIMATIONER GUBBE
         Vector3 movements = new Vector3(xMove, yMove, 0f).normalized * Time.deltaTime * speed;
         transform.position += movements;
+    }
+
+    void Deflect()
+    {
+        if (deflectCooldownTimer <= 0f)
+        {
+            deflectCooldownTimer = deflectCooldown;
+
+            if (currentDeflect != null)
+            {
+                Destroy(currentDeflect);
+                currentDeflect = null;
+            }
+
+            currentDeflect = Instantiate(prefabDeflect, transform.position, Quaternion.identity);
+            currentDeflect.transform.SetParent(transform);
+
+            deflectTimer = deflectTime;
+        }
+    }
+
+    void HandleDeflect()
+    {
+        deflectTimer -= Time.deltaTime;
+        deflectCooldownTimer -= Time.deltaTime;
+
+        if (deflectTimer <= 0f && currentDeflect != null)
+        {
+            Destroy(currentDeflect);
+            currentDeflect = null;
+        }
     }
 
     void StayOnScreen()
@@ -98,14 +147,7 @@ public class FatGuy : MonoBehaviour
     //The hunger bar shrinks with deltaTime
     void Hunger()
     {
-        timer -= Time.deltaTime;
-
-        if (timer <= 0)
-        {
             health = health - 1;
-
-            timer = maxTimer;
-        }
 
         UpdateHealthBar();
     }
@@ -116,7 +158,31 @@ public class FatGuy : MonoBehaviour
         //Check if the health is gone
         if (health <= 0 || health >= maxHealth)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene("Game_Over");
+        }
+    }
+
+    void Score()
+    {
+            GameObject gameManager = GameObject.Find("GameManager");
+            GameManager gameManagerScript = gameManager.GetComponent<GameManager>();
+
+        if (health <= 4 && health >= 0)
+            gameManagerScript.AddScore(scorePerSecond * multiplyer);
+
+        else if (health >= maxHealth - 4 && health <= maxHealth)
+            gameManagerScript.AddScore(scorePerSecond * multiplyer);
+
+        else
+            gameManagerScript.AddScore(scorePerSecond);
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Food")
+        {
+            Destroy(col.gameObject);
+            health += 5;
         }
     }
 }

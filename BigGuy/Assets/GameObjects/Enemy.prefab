@@ -21,8 +21,9 @@ GameObject:
   - component: {fileID: 4136506369591958}
   - component: {fileID: 212094520465917878}
   - component: {fileID: 50521486603989084}
-  - component: {fileID: 114774611674955362}
+  - component: {fileID: 114884720930178054}
   - component: {fileID: 114716157329762094}
+  - component: {fileID: 95745700367885812}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -38,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1048776487042472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -0.375}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,6 +64,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &95745700367885812
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1048776487042472}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a5ccf42fb6760f4bb34ad67989880de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114716157329762094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -75,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
---- !u!114 &114774611674955362
+--- !u!114 &114884720930178054
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,15 +105,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9551ec95517ba48932c01a062adab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopToFire: 4
-  stayForSoLong: 10
-  timer: 0
-  projectile1: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  projectile2: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  projectile3: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  projectile4: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  projectile5: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  projectile6: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  shootTimer: 2.3
+  selfDestruct: 12
+  foodBullet1: {fileID: 1724141270401996, guid: 50315d9a51018944f91af53ebcd2d338,
+    type: 2}
+  foodBullet2: {fileID: 1724141270401996, guid: 9d54bb00e57a255449e037bffe847cda,
+    type: 2}
+  foodBullet3: {fileID: 1724141270401996, guid: d423174d763bd454db9ad5fd00ebcdcf,
+    type: 2}
+  foodBullet4: {fileID: 1724141270401996, guid: 0f18bf013f067fd4294f1fe506355a3d,
+    type: 2}
+  foodBullet5: {fileID: 1724141270401996, guid: 68db85576d1780a40887417bb7309dad,
+    type: 2}
+  foodBullet6: {fileID: 1724141270401996, guid: f1fc09fe445e6b342bec899a69a20419,
+    type: 2}
 --- !u!212 &212094520465917878
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -131,7 +155,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
