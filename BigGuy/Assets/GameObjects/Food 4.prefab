@@ -92,7 +92,7 @@ MonoBehaviour:
   timeUntilDetonation: 10
   xSpeed: -0.1
   ySpeed: 0.1
-  blowback: 1
+  blowback: 0.5
 --- !u!212 &212032752974432460
 SpriteRenderer:
   m_ObjectHideFlags: 1
