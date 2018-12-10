@@ -34,3 +34,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+BigGuy/Assets/Enhanced Hierarchy/
+
+BigGuy/Assets/Enhanced Hierarchy\.meta
