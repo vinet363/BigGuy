@@ -219,8 +219,8 @@ MonoBehaviour:
   spawnMin: 4
   spawnMax: 4
   Enemy1: {fileID: 1048776487042472, guid: 3ea55014218e484479f95ca1dfee6bde, type: 2}
-  SideWalk1: {x: -4.5, y: 6}
-  SideWalk2: {x: 4.5, y: 6}
+  SideWalk1: {x: -3.8, y: 6}
+  SideWalk2: {x: 3.8, y: 6}
 --- !u!4 &361483428
 Transform:
   m_ObjectHideFlags: 0
