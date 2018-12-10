@@ -10,13 +10,15 @@ public class FatGuy : MonoBehaviour
     [SerializeField] int startingHealth = 10;
     [SerializeField] int scorePerSecond = 0;
     [SerializeField] int multiplyer = 10;
-    [SerializeField] float scoreTimer = 1f;
-    [SerializeField] float maxTimer = 1f; 
+    [SerializeField] float maxTimer = 1f;
+    [SerializeField] float deflectCooldown = 0.5f;
+    [SerializeField] float deflectTime = 0.5f;
     [SerializeField] float speed = 0.1f;
     [SerializeField] float xMin = -3.5f;
     [SerializeField] float xMax = 3.5f;
     [SerializeField] float yMin = -2f;
     [SerializeField] float yMax = 2f;
+    [SerializeField] GameObject prefabDeflect;
     [SerializeField] Image FoodBar;
     [SerializeField] Sprite dead;
 
@@ -24,7 +26,10 @@ public class FatGuy : MonoBehaviour
     float timer;
     float xMove = 1f;
     float yMove = 1f;
+    float deflectTimer;
+    float deflectCooldownTimer;
     bool itsDead = false;
+    GameObject currentDeflect;
     Animator anim; // TA INTE BORT  ANIMATIONER GUBBE
 
     // Use this for initialization
@@ -48,8 +53,12 @@ public class FatGuy : MonoBehaviour
         //Takes in the directions on the stick and moves the character accordingly
         Movement();
 
+        if(Input.GetButtonDown("Fire1"))
+            Deflect();
+
         //For making sure you don't go of screen
         StayOnScreen();
+
 
         if (timer <= 0)
         {
@@ -65,7 +74,9 @@ public class FatGuy : MonoBehaviour
         //Checks if you are dead
         Dead();
         if (Input.GetKeyDown(KeyCode.P))
-            health = health + 5; 
+            health = health + 5;
+
+        HandleDeflect();
     }
 
     void Movement()
@@ -76,6 +87,41 @@ public class FatGuy : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(yMove)); // TA INTE BORT  ANIMATIONER GUBBE
         Vector3 movements = new Vector3(xMove, yMove, 0f).normalized * Time.deltaTime * speed;
         transform.position += movements;
+    }
+
+    void Deflect()
+    {
+        if (deflectCooldownTimer <= 0f)
+        {
+            deflectCooldownTimer = deflectCooldown;
+
+            if (currentDeflect != null)
+            {
+                Destroy(currentDeflect);
+                currentDeflect = null;
+            }
+
+            Vector3 currentDisplace = new Vector3();
+            float rotation = 0f;
+
+            currentDeflect = Instantiate(prefabDeflect, transform.position + currentDisplace, Quaternion.identity);
+            currentDeflect.transform.SetParent(transform);
+            currentDeflect.transform.Rotate(new Vector3(0f, 0f, rotation));
+
+            deflectTimer = deflectTime;
+        }
+    }
+
+    void HandleDeflect()
+    {
+        deflectTimer -= Time.deltaTime;
+        deflectCooldownTimer -= Time.deltaTime;
+
+        if (deflectTimer <= 0f && currentDeflect != null)
+        {
+            Destroy(currentDeflect);
+            currentDeflect = null;
+        }
     }
 
     void StayOnScreen()
