@@ -18,4 +18,10 @@ public class Bullet : MonoBehaviour
         if (timeUntilDetonation <= 0)
             Destroy(gameObject);
 	}
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.collider.CompareTag("Counter"))
+            Destroy(gameObject);
+    }
 }

@@ -601,6 +601,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1567215276191294, guid: 558048416d63db14e8ea2355e9afac93,
         type: 2}
+    - target: {fileID: 114058646249874120, guid: b23b53e60be9fc548b1ddac91cf32925,
+        type: 2}
+      propertyPath: deflectCooldown
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b23b53e60be9fc548b1ddac91cf32925, type: 2}
   m_IsPrefabAsset: 0
