@@ -13,11 +13,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject foodBullet5;
     [SerializeField] GameObject foodBullet6;
 
+    Animator anim;
     float timer;
 
     //Start is called once at the start of the program
-    private void Start()
+    void Start()
     {
+        anim = GetComponent<Animator>();
         timer = shootTimer;
     }
 
@@ -39,6 +41,13 @@ public class Enemy : MonoBehaviour
 
     void FoodFight()
     {
+        anim.SetTrigger("Throw");
+        StartCoroutine("Animdelay");
+    }
+
+    IEnumerator Animdelay()
+    {
+        yield return new WaitForSeconds(0.2f);
         Instantiate(foodBullet1, transform.position, Quaternion.identity);
         Instantiate(foodBullet2, transform.position, Quaternion.identity);
         Instantiate(foodBullet3, transform.position, Quaternion.identity);

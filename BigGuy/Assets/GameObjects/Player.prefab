@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 95266922378211182}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,16 +112,15 @@ MonoBehaviour:
   startingHealth: 25
   scorePerSecond: 10
   multiplyer: 10
-  scoreTimer: 1
   maxTimer: 1
-  attackCooldown: 0.5
-  attackTime: 0.5
+  deflectCooldown: 5
+  deflectTime: 0.5
   speed: 5
   xMin: -3.5
   xMax: 3.5
   yMin: -4.5
   yMax: 4.8
-  prefabAttack: {fileID: 1567215276191294, guid: 558048416d63db14e8ea2355e9afac93,
+  prefabDeflect: {fileID: 1567215276191294, guid: 558048416d63db14e8ea2355e9afac93,
     type: 2}
   FoodBar: {fileID: 0}
   dead: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
