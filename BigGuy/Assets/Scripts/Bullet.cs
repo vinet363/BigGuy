@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] float timeUntilDetonation = 10f;
     [SerializeField] float xSpeed;
     [SerializeField] float ySpeed;
+    [SerializeField] float blowback;
 
     // Update is called once per frame
     void Update ()
@@ -22,6 +23,9 @@ public class Bullet : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.collider.CompareTag("Counter"))
-            Destroy(gameObject);
+        {
+            xSpeed = 0;
+            ySpeed = blowback;
+        }
     }
 }

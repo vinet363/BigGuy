@@ -18,6 +18,7 @@ public class FatGuy : MonoBehaviour
     [SerializeField] float xMax = 3.5f;
     [SerializeField] float yMin = -2f;
     [SerializeField] float yMax = 2f;
+    [SerializeField] Vector3 deflectDisplace;
     [SerializeField] GameObject prefabDeflect;
     [SerializeField] Image FoodBar;
     [SerializeField] Sprite dead;
@@ -101,7 +102,11 @@ public class FatGuy : MonoBehaviour
                 currentDeflect = null;
             }
 
-            currentDeflect = Instantiate(prefabDeflect, transform.position, Quaternion.identity);
+            Vector3 currentDisplace = new Vector3();
+
+            currentDisplace = new Vector3(-deflectDisplace.x, deflectDisplace.y, 0f);
+
+            currentDeflect = Instantiate(prefabDeflect, transform.position + currentDisplace, Quaternion.identity);
             currentDeflect.transform.SetParent(transform);
 
             deflectTimer = deflectTime;
