@@ -108,7 +108,7 @@ public class FatGuy : MonoBehaviour
             currentDisplace = new Vector3(-deflectDisplace.x, deflectDisplace.y, 0f);
 
             currentDeflect = Instantiate(prefabDeflect, transform.position + currentDisplace, Quaternion.identity);
-            currentDeflect.transform.SetParent(transform);
+            
 
             deflectTimer = deflectTime;
         }
