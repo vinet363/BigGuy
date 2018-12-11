@@ -341,7 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 1
   spawnMin: 4
-  spawnMax: 4
+  spawnMax: 8
   Enemy1: {fileID: 1048776487042472, guid: 3ea55014218e484479f95ca1dfee6bde, type: 2}
   SideWalk1: {x: -3.8, y: 6}
   SideWalk2: {x: 3.8, y: 6}
@@ -719,9 +719,9 @@ Prefab:
       propertyPath: FoodBar
       value: 
       objectReference: {fileID: 2146491235}
-    - target: {fileID: 114058646249874120, guid: b23b53e60be9fc548b1ddac91cf32925,
+    - target: {fileID: 58837402569966880, guid: b23b53e60be9fc548b1ddac91cf32925,
         type: 2}
-      propertyPath: deflectDisplace.y
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
