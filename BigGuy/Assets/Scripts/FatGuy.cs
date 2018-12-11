@@ -72,6 +72,8 @@ public class FatGuy : MonoBehaviour
         //Giving score to the player based on where the meter is
         Score();
 
+        UpdateHealthBar();
+
         //Checks if you are dead
         Dead();
         if (Input.GetKeyDown(KeyCode.P))
@@ -156,8 +158,6 @@ public class FatGuy : MonoBehaviour
     void Hunger()
     {
             health = health - 1;
-
-        UpdateHealthBar();
     }
 
     //Tells the game what to do when it reaches too high or too low on the hunger meter
