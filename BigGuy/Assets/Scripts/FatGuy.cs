@@ -72,6 +72,8 @@ public class FatGuy : MonoBehaviour
         //Giving score to the player based on where the meter is
         Score();
 
+        UpdateHealthBar();
+
         //Checks if you are dead
         Dead();
         if (Input.GetKeyDown(KeyCode.P))
@@ -90,6 +92,7 @@ public class FatGuy : MonoBehaviour
         transform.position += movements;
     }
 
+    //Creates the GameObject Deflect on screen
     void Deflect()
     {
         if (deflectCooldownTimer <= 0f)
@@ -107,12 +110,13 @@ public class FatGuy : MonoBehaviour
             currentDisplace = new Vector3(-deflectDisplace.x, deflectDisplace.y, 0f);
 
             currentDeflect = Instantiate(prefabDeflect, transform.position + currentDisplace, Quaternion.identity);
-            currentDeflect.transform.SetParent(transform);
+            
 
             deflectTimer = deflectTime;
         }
     }
 
+    //Removes the Deflect from the screen and make the cooldown
     void HandleDeflect()
     {
         deflectTimer -= Time.deltaTime;
@@ -125,6 +129,7 @@ public class FatGuy : MonoBehaviour
         }
     }
 
+    //Keep the player on the screen
     void StayOnScreen()
     {
         //check left side
@@ -153,8 +158,6 @@ public class FatGuy : MonoBehaviour
     void Hunger()
     {
             health = health - 1;
-
-        UpdateHealthBar();
     }
 
     //Tells the game what to do when it reaches too high or too low on the hunger meter
@@ -167,22 +170,23 @@ public class FatGuy : MonoBehaviour
         }
     }
 
+    //Sets how much points you get
     void Score()
     {
             GameObject gameManager = GameObject.Find("GameManager");
             GameManager gameManagerScript = gameManager.GetComponent<GameManager>();
 
-        if (health <= 4 && health >= 0)
+        if (health <= 7 && health >= 0)
             gameManagerScript.AddScore(scorePerSecond * multiplyer);
 
-        else if (health >= maxHealth - 4 && health <= maxHealth)
+        else if (health >= maxHealth - 7 && health <= maxHealth)
             gameManagerScript.AddScore(scorePerSecond * multiplyer);
 
         else
             gameManagerScript.AddScore(scorePerSecond);
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Food")
         {
