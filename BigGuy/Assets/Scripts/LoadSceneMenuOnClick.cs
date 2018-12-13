@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 public class LoadSceneMenuOnClick : MonoBehaviour
 {
     [SerializeField] GameObject cameraAnim;
+    [SerializeField] GameObject tvAnim;
     int sceneIndex;
     Animator Anim;
+    Animator TVAnim;
 
     void Start()
     {
         Anim = cameraAnim.GetComponent<Animator>();
+        TVAnim = tvAnim.GetComponent<Animator>();
     }
 
     public void LoadByIndex(int sceneBuildIndex)
@@ -19,6 +22,7 @@ public class LoadSceneMenuOnClick : MonoBehaviour
         sceneIndex = sceneBuildIndex;
         StartCoroutine("LoadPlayScene");
         Anim.Play("MainMenucamera2");
+        TVAnim.Play("TVSpritePlay");
     }
 
     IEnumerator LoadPlayScene()
