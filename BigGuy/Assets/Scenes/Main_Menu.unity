@@ -15087,8 +15087,8 @@ GameObject:
   - component: {fileID: 533283181}
   - component: {fileID: 533283180}
   - component: {fileID: 533283179}
-  - component: {fileID: 533283178}
   - component: {fileID: 533283177}
+  - component: {fileID: 533283178}
   - component: {fileID: 533283182}
   m_Layer: 5
   m_Name: StartButton
@@ -15214,7 +15214,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 533283175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad595d9a048100443bceeae213802af3, type: 3}
+  m_Script: {fileID: 11500000, guid: 26728e832e5bfd54bacc7f1678cf49a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cameraAnim: {fileID: 105989642}
@@ -25282,8 +25282,8 @@ GameObject:
   - component: {fileID: 722733931}
   - component: {fileID: 722733930}
   - component: {fileID: 722733929}
-  - component: {fileID: 722733928}
   - component: {fileID: 722733927}
+  - component: {fileID: 722733928}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -25408,7 +25408,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 722733925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad595d9a048100443bceeae213802af3, type: 3}
+  m_Script: {fileID: 11500000, guid: 26728e832e5bfd54bacc7f1678cf49a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cameraAnim: {fileID: 105989642}
@@ -30675,8 +30675,8 @@ GameObject:
   - component: {fileID: 816236863}
   - component: {fileID: 816236862}
   - component: {fileID: 816236861}
-  - component: {fileID: 816236860}
   - component: {fileID: 816236859}
+  - component: {fileID: 816236860}
   m_Layer: 5
   m_Name: HowToPlay
   m_TagString: Untagged
@@ -30801,7 +30801,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 816236857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad595d9a048100443bceeae213802af3, type: 3}
+  m_Script: {fileID: 11500000, guid: 26728e832e5bfd54bacc7f1678cf49a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cameraAnim: {fileID: 105989642}
@@ -76512,7 +76512,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1908780586}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 249169bbea0dd51478b14718e62f7e54, type: 3}
   m_Name: 
@@ -76535,7 +76535,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1908780586}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bade397de0db6634686b451e10dc2edc, type: 3}
   m_Name: 
