@@ -76512,14 +76512,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1908780586}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 249169bbea0dd51478b14718e62f7e54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Shader: {fileID: 4800000, guid: 6b426a8c366d0584dadb551db862ddeb, type: 3}
   AutomaticPhase: 1
-  Phase: 3.4618192
+  Phase: 4.0468216
   ConvertToGrayscale: 0
   NoiseIntensity: 0.222
   ScanlinesIntensity: 0.74
@@ -76535,7 +76535,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1908780586}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bade397de0db6634686b451e10dc2edc, type: 3}
   m_Name: 
