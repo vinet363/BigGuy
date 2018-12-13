@@ -5,8 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneOnClick : MonoBehaviour
 {
+    [SerializeField] GameObject cameraAnim;
+    int sceneIndex;
+    Animator Anim;
+
+    void Start()
+    {
+        Anim = cameraAnim.GetComponent<Animator>();
+    }
+
     public void LoadByIndex(int sceneBuildIndex)
     {
-        SceneManager.LoadScene(sceneBuildIndex);
+        sceneIndex = sceneBuildIndex;
+        StartCoroutine("LoadPlayScene");
+        Anim.Play("MainMenucamera2");
+    }
+
+    IEnumerator LoadPlayScene()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(sceneIndex);
     }
 }
