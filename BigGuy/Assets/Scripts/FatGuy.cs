@@ -33,7 +33,7 @@ public class FatGuy : MonoBehaviour
     bool itsDead = false;
     GameObject currentDeflect;
     Animator anim; // TA INTE BORT  ANIMATIONER GUBBE
-
+    
     // Use this for initialization
     void Start ()
     {
@@ -194,6 +194,7 @@ public class FatGuy : MonoBehaviour
             Destroy(col.gameObject);
             health += 5;
             CameraShaker.Instance.ShakeOnce(1f, 5f, 0f, 0.5f);
+            SplitRGB();
         }
     }
 }
