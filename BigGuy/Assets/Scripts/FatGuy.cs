@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using EZCameraShake;
 
 public class FatGuy : MonoBehaviour
 {
@@ -192,6 +193,7 @@ public class FatGuy : MonoBehaviour
         {
             Destroy(col.gameObject);
             health += 5;
+            CameraShaker.Instance.ShakeOnce(1f, 5f, 0f, 0.5f);
         }
     }
 }
