@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212314175749450796}
   - component: {fileID: 61125062250820788}
   - component: {fileID: 114673452336712630}
+  - component: {fileID: 95814306440183284}
   m_Layer: 0
   m_Name: TennisRacket
   m_TagString: Counter
@@ -67,6 +68,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2602175, y: 2.1464887}
   m_EdgeRadius: 0
+--- !u!95 &95814306440183284
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1567215276191294}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 83babce28fc231149830e7ec6efa02b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114673452336712630
 MonoBehaviour:
   m_ObjectHideFlags: 1
