@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1344491, g: 0.18828583, b: 0.39334399, a: 1}
+  m_IndirectSpecularColor: {r: 0.016224684, g: 0.029571582, b: 0.1282512, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -199,7 +199,7 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -10408,7 +10408,7 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -15363,9 +15363,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 533283175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad595d9a048100443bceeae213802af3, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f901c41ecc5c054da708c6a6ed40c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraAnim: {fileID: 908876593}
 --- !u!114 &533283179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20827,7 +20828,7 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -25575,9 +25576,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 722733925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad595d9a048100443bceeae213802af3, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f901c41ecc5c054da708c6a6ed40c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraAnim: {fileID: 908876593}
 --- !u!114 &722733929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31110,9 +31112,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 816236857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad595d9a048100443bceeae213802af3, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f901c41ecc5c054da708c6a6ed40c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraAnim: {fileID: 908876593}
 --- !u!114 &816236861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31665,6 +31668,7 @@ GameObject:
   m_Component:
   - component: {fileID: 908876594}
   - component: {fileID: 908876596}
+  - component: {fileID: 908876595}
   m_Layer: 0
   m_Name: CameraMain
   m_TagString: Untagged
@@ -31686,6 +31690,24 @@ Transform:
   m_Father: {fileID: 229760025}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &908876595
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 908876593}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 76937db24e0706144946d7dbc7a8a144, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &908876596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36703,7 +36725,7 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -41666,7 +41688,7 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -47593,7 +47615,7 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -57859,7 +57881,7 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -67864,7 +67886,7 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -77239,7 +77261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shader: {fileID: 4800000, guid: 6b426a8c366d0584dadb551db862ddeb, type: 3}
   AutomaticPhase: 1
-  Phase: 9.596401
+  Phase: 6.6399174
   ConvertToGrayscale: 0
   NoiseIntensity: 0.222
   ScanlinesIntensity: 0.74
