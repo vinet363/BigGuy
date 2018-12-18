@@ -27,36 +27,51 @@ public class EnemySpawner : MonoBehaviour
                 Spawn();
                 Spawn2(); 
             }
-            else
-                Debug.Log("I am not an Enemy");
         }
 	}
 
     void Spawn ()
     {
         Vector3 spawnPosition = SideWalk1;
-        int randomSpawn = Random.Range(0, 4);
+        int randomSpawn = Random.Range(0, 3);
         if (randomSpawn == 0)
             Instantiate(Enemy1, spawnPosition, Quaternion.identity);
         else if (randomSpawn == 1)
             Instantiate(Enemy2, spawnPosition, Quaternion.identity);
         else if (randomSpawn == 2)
             Instantiate(Enemy3, spawnPosition, Quaternion.identity);
-        else if (randomSpawn >= 3)
+        else if (randomSpawn == 3)
             Instantiate(Enemy4, spawnPosition, Quaternion.identity);
     }
 
     void Spawn2 ()
     {
         Vector3 spawnPosition = SideWalk2;
-        int randomSpawn2 = Random.Range(0, 4);
+        int randomSpawn2 = Random.Range(0, 3);
         if (randomSpawn2 == 0)
             Instantiate(Enemy1, spawnPosition, Quaternion.identity);
         else if (randomSpawn2 == 1)
             Instantiate(Enemy2, spawnPosition, Quaternion.identity);
         else if (randomSpawn2 == 2)
             Instantiate(Enemy3, spawnPosition, Quaternion.identity);
-        else if (randomSpawn2 >= 3)
+        else if (randomSpawn2 == 3)
             Instantiate(Enemy4, spawnPosition, Quaternion.identity);
     }
 }
+
+        int randomSpawn = Random.Range(0, 3);
+        if (randomSpawn == 0)
+            Instantiate(Enemy1, spawnPosition, Quaternion.identity);
+        else if (randomSpawn == 1)
+            Instantiate(Enemy2, spawnPosition, Quaternion.identity);
+        else if (randomSpawn == 2)
+            Instantiate(Enemy3, spawnPosition, Quaternion.identity);
+        else if (randomSpawn == 3)
+        int randomSpawn2 = Random.Range(0, 3);
+        if (randomSpawn2 == 0)
+            Instantiate(Enemy1, spawnPosition, Quaternion.identity);
+        else if (randomSpawn2 == 1)
+            Instantiate(Enemy2, spawnPosition, Quaternion.identity);
+        else if (randomSpawn2 == 2)
+            Instantiate(Enemy3, spawnPosition, Quaternion.identity);
+        else if (randomSpawn2 == 3)
