@@ -8,8 +8,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float timer2 = 1f;
     [SerializeField] float timeReduction = 1f;
     [SerializeField] float enemyUpCountdown = 30f;
-    [SerializeField] float spawnTimeMin = -2f;
-    [SerializeField] float spawnTimeMax = 2f;
+    [SerializeField] float spawnTimeMin = 4f;
+    [SerializeField] float spawnTimeMax = 8f;
     [SerializeField] GameObject Enemy1Left;
     [SerializeField] GameObject Enemy2Left;
     [SerializeField] GameObject Enemy3Left;
