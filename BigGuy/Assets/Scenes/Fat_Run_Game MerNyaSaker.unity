@@ -913,8 +913,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer1: 1
   timer2: 1
-  spawnMin: 4
-  spawnMax: 8
+  timeReduction: 1
+  enemyUpCountdown: 30
+  spawnTimeMin: 4
+  spawnTimeMax: 8
   Enemy1Left: {fileID: 1048776487042472, guid: 8c5e8956c88862a4e878abb028262559, type: 2}
   Enemy2Left: {fileID: 1048776487042472, guid: 047fa8169f97a3b498644022e32a3db8, type: 2}
   Enemy3Left: {fileID: 1048776487042472, guid: 74341b6d809c4374c98d32230f92d220, type: 2}
@@ -4628,7 +4630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shader: {fileID: 4800000, guid: 6b426a8c366d0584dadb551db862ddeb, type: 3}
   AutomaticPhase: 1
-  Phase: 5.3020997
+  Phase: 8.777985
   ConvertToGrayscale: 0
   NoiseIntensity: 0.222
   ScanlinesIntensity: 0.22
