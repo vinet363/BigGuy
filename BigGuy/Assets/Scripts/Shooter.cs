@@ -13,17 +13,7 @@ public class Shooter : MonoBehaviour
 
     float xValue = 0f;
     float yValue = 1f;
-    float xMin = -1f;
-    float xMax = 1f;
-    float yMin = -1f;
-    float yMax = 1f;
     GameObject currentShotLocation;
-
-    // Use this for initialization
-    void Start ()
-    {
-		
-	}
 	
 	// Update is called once per frame
 	void Update ()
