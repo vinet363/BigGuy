@@ -29,10 +29,6 @@ public class Shooter : MonoBehaviour
 	void Update ()
     {
         Shooting();
-        if (yValue == yMax || )
-        {
-            yValue -= 0.2f;
-        }
     }
 
     void Shooting()
