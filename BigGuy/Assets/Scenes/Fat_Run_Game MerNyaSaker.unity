@@ -911,13 +911,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf077514e507e0d4abde45684dbd0883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 1
+  timer1: 1
+  timer2: 1
   spawnMin: 4
   spawnMax: 8
   Enemy1: {fileID: 1048776487042472, guid: 3ea55014218e484479f95ca1dfee6bde, type: 2}
-  Enemy2: {fileID: 0}
-  Enemy3: {fileID: 0}
-  Enemy4: {fileID: 0}
+  Enemy2: {fileID: 1048776487042472, guid: 61d4ea0f03fe5c34088b154a3be8a3a6, type: 2}
+  Enemy3: {fileID: 1048776487042472, guid: e68c1fbad8b561842a0e5cb739b60c91, type: 2}
+  Enemy4: {fileID: 1048776487042472, guid: 6779ddfbc538bd34299ba149b41e3f4e, type: 2}
   SideWalk1: {x: -3.8, y: 6}
   SideWalk2: {x: 3.8, y: 6}
 --- !u!4 &361483428
@@ -4618,7 +4619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shader: {fileID: 4800000, guid: 6b426a8c366d0584dadb551db862ddeb, type: 3}
   AutomaticPhase: 1
-  Phase: 8.657191
+  Phase: 9.742543
   ConvertToGrayscale: 0
   NoiseIntensity: 0.222
   ScanlinesIntensity: 0.22
