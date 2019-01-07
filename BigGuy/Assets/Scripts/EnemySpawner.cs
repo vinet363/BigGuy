@@ -8,10 +8,14 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float timer2 = 1f;
     [SerializeField] float spawnMin = -2f;
     [SerializeField] float spawnMax = 2f;
-    [SerializeField] GameObject Enemy1;
-    [SerializeField] GameObject Enemy2;
-    [SerializeField] GameObject Enemy3;
-    [SerializeField] GameObject Enemy4;
+    [SerializeField] GameObject Enemy1Left;
+    [SerializeField] GameObject Enemy2Left;
+    [SerializeField] GameObject Enemy3Left;
+    [SerializeField] GameObject Enemy4Left;
+    [SerializeField] GameObject Enemy1Right;
+    [SerializeField] GameObject Enemy2Right;
+    [SerializeField] GameObject Enemy3Right;
+    [SerializeField] GameObject Enemy4Right;
     [SerializeField] Vector2 SideWalk1;
     [SerializeField] Vector2 SideWalk2;
 
@@ -24,42 +28,42 @@ public class EnemySpawner : MonoBehaviour
         {
             timer1 = Random.Range(spawnMin, spawnMax);
 
-            Spawn();
+            SpawnLeft();
         }
         
         else if (timer2 <= 0f)
         {
             timer2 = Random.Range(spawnMin, spawnMax);
 
-            Spawn2();
+            SpawnRight();
         }
     }
 
-    void Spawn()
+    void SpawnLeft()
     {
         Vector3 spawnPosition = SideWalk1;
         int randomSpawn = Random.Range(0, 3);
         if (randomSpawn == 0)
-            Instantiate(Enemy1, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy1Left, spawnPosition, Quaternion.identity);
         else if (randomSpawn == 1)
-            Instantiate(Enemy2, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy2Left, spawnPosition, Quaternion.identity);
         else if (randomSpawn == 2)
-            Instantiate(Enemy3, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy3Left, spawnPosition, Quaternion.identity);
         else if (randomSpawn == 3)
-            Instantiate(Enemy4, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy4Left, spawnPosition, Quaternion.identity);
     }
 
-    void Spawn2()
+    void SpawnRight()
     {
         Vector3 spawnPosition = SideWalk2;
         int randomSpawn2 = Random.Range(0, 3);
         if (randomSpawn2 == 0)
-            Instantiate(Enemy1, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy1Right, spawnPosition, Quaternion.identity);
         else if (randomSpawn2 == 1)
-            Instantiate(Enemy2, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy2Right, spawnPosition, Quaternion.identity);
         else if (randomSpawn2 == 2)
-            Instantiate(Enemy3, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy3Right, spawnPosition, Quaternion.identity);
         else if (randomSpawn2 == 3)
-            Instantiate(Enemy4, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy4Right, spawnPosition, Quaternion.identity);
     }
 }

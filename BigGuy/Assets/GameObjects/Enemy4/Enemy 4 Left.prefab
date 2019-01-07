@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114716157329762094}
   - component: {fileID: 95745700367885812}
   m_Layer: 0
-  m_Name: Enemy 4
+  m_Name: Enemy 4 Left
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootTimer: 2.3
   selfDestruct: 12
+  LeftDirection: 1
   foodBullet1: {fileID: 1724141270401996, guid: 219d13fc16df3fe4b8bbe69724d9c4a5,
     type: 2}
   foodBullet2: {fileID: 1724141270401996, guid: 2ebba887a31ab3845ab1d211a73c10fb,

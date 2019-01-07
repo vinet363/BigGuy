@@ -915,10 +915,18 @@ MonoBehaviour:
   timer2: 1
   spawnMin: 4
   spawnMax: 8
-  Enemy1: {fileID: 1048776487042472, guid: 3ea55014218e484479f95ca1dfee6bde, type: 2}
-  Enemy2: {fileID: 1048776487042472, guid: 61d4ea0f03fe5c34088b154a3be8a3a6, type: 2}
-  Enemy3: {fileID: 1048776487042472, guid: e68c1fbad8b561842a0e5cb739b60c91, type: 2}
-  Enemy4: {fileID: 1048776487042472, guid: 6779ddfbc538bd34299ba149b41e3f4e, type: 2}
+  Enemy1Left: {fileID: 1048776487042472, guid: 8c5e8956c88862a4e878abb028262559, type: 2}
+  Enemy2Left: {fileID: 1048776487042472, guid: 047fa8169f97a3b498644022e32a3db8, type: 2}
+  Enemy3Left: {fileID: 1048776487042472, guid: 74341b6d809c4374c98d32230f92d220, type: 2}
+  Enemy4Left: {fileID: 1048776487042472, guid: 6a9a023bf1238ab4a966bc2ebec59e82, type: 2}
+  Enemy1Right: {fileID: 1048776487042472, guid: 3ea55014218e484479f95ca1dfee6bde,
+    type: 2}
+  Enemy2Right: {fileID: 1048776487042472, guid: 61d4ea0f03fe5c34088b154a3be8a3a6,
+    type: 2}
+  Enemy3Right: {fileID: 1048776487042472, guid: e68c1fbad8b561842a0e5cb739b60c91,
+    type: 2}
+  Enemy4Right: {fileID: 1048776487042472, guid: 6779ddfbc538bd34299ba149b41e3f4e,
+    type: 2}
   SideWalk1: {x: -3.8, y: 6}
   SideWalk2: {x: 3.8, y: 6}
 --- !u!4 &361483428
@@ -2421,6 +2429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: {fileID: 83901272}
+  highScore: {fileID: 0}
 --- !u!4 &913096507
 Transform:
   m_ObjectHideFlags: 0
@@ -4619,7 +4628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shader: {fileID: 4800000, guid: 6b426a8c366d0584dadb551db862ddeb, type: 3}
   AutomaticPhase: 1
-  Phase: 1.5712597
+  Phase: 5.3020997
   ConvertToGrayscale: 0
   NoiseIntensity: 0.222
   ScanlinesIntensity: 0.22

@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114716157329762094}
   - component: {fileID: 95745700367885812}
   m_Layer: 0
-  m_Name: Enemy 2
+  m_Name: Enemy 3 Right
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,7 +104,7 @@ Animator:
   m_GameObject: {fileID: 1048776487042472}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1273850617f79894a9449c9872a1d770, type: 2}
+  m_Controller: {fileID: 9100000, guid: f9c81841cd9a4104cb49c545ff66f9c9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -156,17 +156,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootTimer: 2.3
   selfDestruct: 12
-  foodBullet1: {fileID: 1724141270401996, guid: f76d0f9fc6c495a4b835ea22d6ef5391,
+  LeftDirection: 0
+  foodBullet1: {fileID: 1724141270401996, guid: 4370496a2f97ff346b2643a9584021a4,
     type: 2}
-  foodBullet2: {fileID: 1724141270401996, guid: caa4823b3e283434f9e5451271f4769d,
+  foodBullet2: {fileID: 1724141270401996, guid: 2f7d979a3648c1e46a9ee2cbef050e6e,
     type: 2}
-  foodBullet3: {fileID: 1724141270401996, guid: df15ff80e62459c4bbbfa5845a0afbf6,
+  foodBullet3: {fileID: 1724141270401996, guid: 256c02fddd1a82541bb471acb6205913,
     type: 2}
-  foodBullet4: {fileID: 1724141270401996, guid: 1f4b1733c882b1946af4a84623eba87e,
+  foodBullet4: {fileID: 1724141270401996, guid: f544f4a331564f5449d3e33b66bdd5f6,
     type: 2}
-  foodBullet5: {fileID: 1724141270401996, guid: 8b66688d3c95b6f4cb2bc24bde2d6045,
+  foodBullet5: {fileID: 1724141270401996, guid: a1264b65eb0f22e48a2dbe1edee928e4,
     type: 2}
-  foodBullet6: {fileID: 1724141270401996, guid: 8522161e20444e146b9fffbfa479d54f,
+  foodBullet6: {fileID: 1724141270401996, guid: 2367da4ca2ab8044da2b59dfad5ed102,
     type: 2}
 --- !u!212 &212094520465917878
 SpriteRenderer:

@@ -10,16 +10,29 @@ public class GameManager : MonoBehaviour
 
     int totalScore = 0;
 
+    public Text highScore;
+
 	// Use this for initialization
 	void Start ()
     {
+        if (points)
         points.text = totalScore.ToString();
+        if(highScore)
+        highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
 	}
 
     public void AddScore(int score)
     {
         totalScore += score;
         points.text = totalScore.ToString();
+
+        if(totalScore > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", totalScore);
+            if(highScore)
+                highScore.text = totalScore.ToString();
+        }
+
     }
 	
 	// Update is called once per frame
