@@ -156,17 +156,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootTimer: 2.3
   selfDestruct: 12
-  foodBullet1: {fileID: 1724141270401996, guid: 50315d9a51018944f91af53ebcd2d338,
+  foodBullet1: {fileID: 1724141270401996, guid: 4370496a2f97ff346b2643a9584021a4,
     type: 2}
-  foodBullet2: {fileID: 1724141270401996, guid: 9d54bb00e57a255449e037bffe847cda,
+  foodBullet2: {fileID: 1724141270401996, guid: 2f7d979a3648c1e46a9ee2cbef050e6e,
     type: 2}
-  foodBullet3: {fileID: 1724141270401996, guid: d423174d763bd454db9ad5fd00ebcdcf,
+  foodBullet3: {fileID: 1724141270401996, guid: 256c02fddd1a82541bb471acb6205913,
     type: 2}
-  foodBullet4: {fileID: 1724141270401996, guid: 0f18bf013f067fd4294f1fe506355a3d,
+  foodBullet4: {fileID: 1724141270401996, guid: f544f4a331564f5449d3e33b66bdd5f6,
     type: 2}
-  foodBullet5: {fileID: 1724141270401996, guid: 68db85576d1780a40887417bb7309dad,
+  foodBullet5: {fileID: 1724141270401996, guid: a1264b65eb0f22e48a2dbe1edee928e4,
     type: 2}
-  foodBullet6: {fileID: 1724141270401996, guid: f1fc09fe445e6b342bec899a69a20419,
+  foodBullet6: {fileID: 1724141270401996, guid: 2367da4ca2ab8044da2b59dfad5ed102,
     type: 2}
 --- !u!212 &212094520465917878
 SpriteRenderer:
