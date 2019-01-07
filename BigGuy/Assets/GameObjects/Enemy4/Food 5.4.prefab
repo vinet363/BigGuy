@@ -90,9 +90,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeUntilDetonation: 10
-  xSpeed: -0.25
+  xSpeed: -0.14
   ySpeed: 0
-  blowback: 0.25
+  blowback: 0.14
 --- !u!212 &212032752974432460
 SpriteRenderer:
   m_ObjectHideFlags: 1
