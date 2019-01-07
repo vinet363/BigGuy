@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootTimer: 2.3
   selfDestruct: 12
-  LeftDirection: 0
+  LeftDirection: 1
   foodBullet1: {fileID: 1724141270401996, guid: f76d0f9fc6c495a4b835ea22d6ef5391,
     type: 2}
   foodBullet2: {fileID: 1724141270401996, guid: caa4823b3e283434f9e5451271f4769d,
