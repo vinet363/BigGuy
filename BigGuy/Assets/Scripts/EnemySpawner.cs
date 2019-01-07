@@ -6,8 +6,10 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] float timer1 = 1f;
     [SerializeField] float timer2 = 1f;
-    [SerializeField] float spawnMin = -2f;
-    [SerializeField] float spawnMax = 2f;
+    [SerializeField] float timeReduction = 1f;
+    [SerializeField] float enemyUpCountdown = 30f;
+    [SerializeField] float spawnTimeMin = 4f;
+    [SerializeField] float spawnTimeMax = 8f;
     [SerializeField] GameObject Enemy1Left;
     [SerializeField] GameObject Enemy2Left;
     [SerializeField] GameObject Enemy3Left;
@@ -19,23 +21,40 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] Vector2 SideWalk1;
     [SerializeField] Vector2 SideWalk2;
 
+    float timerCopy = 0;
+
+    void Start()
+    {
+        timerCopy = enemyUpCountdown;
+    }
+
     // Update is called once per frame
     void Update()
     {
         timer1 -= Time.deltaTime;
         timer2 -= Time.deltaTime;
+        enemyUpCountdown -= Time.deltaTime;
+
         if (timer1 <= 0f)
         {
-            timer1 = Random.Range(spawnMin, spawnMax);
+            timer1 = Random.Range(spawnTimeMin, spawnTimeMax);
 
             SpawnLeft();
         }
         
         else if (timer2 <= 0f)
         {
-            timer2 = Random.Range(spawnMin, spawnMax);
+            timer2 = Random.Range(spawnTimeMin, spawnTimeMax);
 
             SpawnRight();
+        }
+
+        if(enemyUpCountdown <= 0f)
+        {
+            enemyUpCountdown = timerCopy;
+
+            spawnTimeMin -= timeReduction;
+            spawnTimeMax -= timeReduction;
         }
     }
 
