@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float shootTimer = 10f;
     [SerializeField] float selfDestruct = 7f;
+    [SerializeField] bool LeftDirection = false; 
     [SerializeField] GameObject foodBullet1;
     [SerializeField] GameObject foodBullet2;
     [SerializeField] GameObject foodBullet3;
@@ -48,11 +49,18 @@ public class Enemy : MonoBehaviour
     IEnumerator Animdelay()
     {
         yield return new WaitForSeconds(0.2f);
-        Instantiate(foodBullet1, transform.position, Quaternion.identity);
-        Instantiate(foodBullet2, transform.position, Quaternion.identity);
-        Instantiate(foodBullet3, transform.position, Quaternion.identity);
-        Instantiate(foodBullet4, transform.position, Quaternion.identity);
-        Instantiate(foodBullet5, transform.position, Quaternion.identity);
-        Instantiate(foodBullet6, transform.position, Quaternion.identity);
+        if (LeftDirection == true)
+        {
+            Instantiate(foodBullet1, transform.position, Quaternion.identity);
+            Instantiate(foodBullet2, transform.position, Quaternion.identity);
+            Instantiate(foodBullet3, transform.position, Quaternion.identity);
+        }
+
+        else
+        {
+            Instantiate(foodBullet4, transform.position, Quaternion.identity);
+            Instantiate(foodBullet5, transform.position, Quaternion.identity);
+            Instantiate(foodBullet6, transform.position, Quaternion.identity);
+        }
     }
 }

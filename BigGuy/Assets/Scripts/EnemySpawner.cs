@@ -4,59 +4,85 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] float timer = 1f;
-    [SerializeField] float spawnMin = -2;
-    [SerializeField] float spawnMax = 2;
-    [SerializeField] GameObject Enemy1;
-    [SerializeField] GameObject Enemy2;
-    [SerializeField] GameObject Enemy3;
-    [SerializeField] GameObject Enemy4;
+    [SerializeField] float timer1 = 1f;
+    [SerializeField] float timer2 = 1f;
+    [SerializeField] float timeReduction = 1f;
+    [SerializeField] float enemyUpCountdown = 30f;
+    [SerializeField] float spawnTimeMin = 4f;
+    [SerializeField] float spawnTimeMax = 8f;
+    [SerializeField] GameObject Enemy1Left;
+    [SerializeField] GameObject Enemy2Left;
+    [SerializeField] GameObject Enemy3Left;
+    [SerializeField] GameObject Enemy4Left;
+    [SerializeField] GameObject Enemy1Right;
+    [SerializeField] GameObject Enemy2Right;
+    [SerializeField] GameObject Enemy3Right;
+    [SerializeField] GameObject Enemy4Right;
     [SerializeField] Vector2 SideWalk1;
     [SerializeField] Vector2 SideWalk2;
 
-    // Update is called once per frame
-    void Update ()
-    {
-        timer -= Time.deltaTime;
-        if (timer <= 0f)
-        {
-            timer = Random.Range(spawnMin, spawnMax);
-            int type = Random.Range(0, 100);
-            if (type <= 99)
-            {
-                Spawn();
-                Spawn2(); 
-            }
-            else
-                Debug.Log("I am not an Enemy");
-        }
-	}
+    float timerCopy = 0;
 
-    void Spawn ()
+    void Start()
+    {
+        timerCopy = enemyUpCountdown;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        timer1 -= Time.deltaTime;
+        timer2 -= Time.deltaTime;
+        enemyUpCountdown -= Time.deltaTime;
+
+        if (timer1 <= 0f)
+        {
+            timer1 = Random.Range(spawnTimeMin, spawnTimeMax);
+
+            SpawnLeft();
+        }
+        
+        else if (timer2 <= 0f)
+        {
+            timer2 = Random.Range(spawnTimeMin, spawnTimeMax);
+
+            SpawnRight();
+        }
+
+        if(enemyUpCountdown <= 0f && spawnTimeMin > 2 && spawnTimeMax > 4)
+        {
+            enemyUpCountdown = timerCopy;
+
+            spawnTimeMin -= timeReduction;
+            spawnTimeMax -= timeReduction * 2;
+        }
+    }
+
+    void SpawnLeft()
     {
         Vector3 spawnPosition = SideWalk1;
         int randomSpawn = Random.Range(0, 3);
         if (randomSpawn == 0)
-            Instantiate(Enemy1, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy1Left, spawnPosition, Quaternion.identity);
         else if (randomSpawn == 1)
-            Instantiate(Enemy2, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy2Left, spawnPosition, Quaternion.identity);
         else if (randomSpawn == 2)
-            Instantiate(Enemy3, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy3Left, spawnPosition, Quaternion.identity);
         else if (randomSpawn == 3)
-            Instantiate(Enemy4, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy4Left, spawnPosition, Quaternion.identity);
     }
 
-    void Spawn2 ()
+    void SpawnRight()
     {
         Vector3 spawnPosition = SideWalk2;
         int randomSpawn2 = Random.Range(0, 3);
         if (randomSpawn2 == 0)
-            Instantiate(Enemy1, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy1Right, spawnPosition, Quaternion.identity);
         else if (randomSpawn2 == 1)
-            Instantiate(Enemy2, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy2Right, spawnPosition, Quaternion.identity);
         else if (randomSpawn2 == 2)
-            Instantiate(Enemy3, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy3Right, spawnPosition, Quaternion.identity);
         else if (randomSpawn2 == 3)
-            Instantiate(Enemy4, spawnPosition, Quaternion.identity);
+            Instantiate(Enemy4Right, spawnPosition, Quaternion.identity);
     }
 }

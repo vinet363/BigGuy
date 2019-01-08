@@ -33,7 +33,7 @@ public class FatGuy : MonoBehaviour
     bool itsDead = false;
     GameObject currentDeflect;
     Animator anim; // TA INTE BORT  ANIMATIONER GUBBE
-
+    
     // Use this for initialization
     void Start ()
     {
@@ -150,6 +150,7 @@ public class FatGuy : MonoBehaviour
             transform.position = new Vector3(transform.position.x, yMax, 0f);
     }
 
+    //
     void UpdateHealthBar()
     {
         FoodBar.fillAmount = Mathf.InverseLerp(0, maxHealth, health);
@@ -194,6 +195,7 @@ public class FatGuy : MonoBehaviour
             Destroy(col.gameObject);
             health += 5;
             CameraShaker.Instance.ShakeOnce(1f, 5f, 0f, 0.5f);
+            //SplitRGB();
         }
     }
 }
