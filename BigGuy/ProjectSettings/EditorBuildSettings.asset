@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Fat_Run_Game MerNyaSaker.unity
     guid: d429193e99c20294196e8f7152df8bfb
   - enabled: 1
-    path: Assets/Scenes/How_To_Play.unity
-    guid: f5ab2b1dbb0bce3428779de43c0718df
+    path: Assets/Scenes/How_To_Play_Test.unity
+    guid: e70a0941da9e31d41a067f91c3212b09
   - enabled: 1
-    path: Assets/Scenes/Score.unity
-    guid: 7ddb3cc2225f9fb49be3309f47165fcc
+    path: Assets/Scenes/Score_Test.unity
+    guid: 411fba4a95d9785488cd6c7d1e5a5d43
   - enabled: 1
     path: Assets/Scenes/Game_Over.unity
     guid: a3cfd20aa3d5a144e98e9c2d65ad4848
@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Fat_Run_Game.unity
     guid: 3e1266e864b8a6344ac5461be4aa5d3f
+  - enabled: 0
+    path: Assets/Scenes/How_To_Play.unity
+    guid: f5ab2b1dbb0bce3428779de43c0718df
+  - enabled: 0
+    path: Assets/Scenes/Score.unity
+    guid: 7ddb3cc2225f9fb49be3309f47165fcc
   m_configObjects: {}
