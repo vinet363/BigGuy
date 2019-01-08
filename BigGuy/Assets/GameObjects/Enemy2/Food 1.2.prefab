@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47de367f94397f6489a5ab07d5e31f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeUntilDetonation: 10
+  timeUntilDetonation: 5
   xSpeed: 0.08
   ySpeed: 0.08
   blowback: 0.08
