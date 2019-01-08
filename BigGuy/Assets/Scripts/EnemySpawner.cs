@@ -49,12 +49,12 @@ public class EnemySpawner : MonoBehaviour
             SpawnRight();
         }
 
-        if(enemyUpCountdown <= 0f)
+        if(enemyUpCountdown <= 0f && spawnTimeMin > 2 && spawnTimeMax > 4)
         {
             enemyUpCountdown = timerCopy;
 
             spawnTimeMin -= timeReduction;
-            spawnTimeMax -= timeReduction;
+            spawnTimeMax -= timeReduction * 2;
         }
     }
 
