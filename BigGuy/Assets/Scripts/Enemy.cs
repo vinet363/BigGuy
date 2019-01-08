@@ -13,6 +13,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject foodBullet4;
     [SerializeField] GameObject foodBullet5;
     [SerializeField] GameObject foodBullet6;
+    [SerializeField] GameObject specialBullet1;
+    [SerializeField] GameObject specialBullet2;
+    [SerializeField] GameObject specialBullet3;
+    [SerializeField] GameObject specialBullet4;
+    [SerializeField] GameObject specialBullet5;
+    [SerializeField] GameObject specialBullet6;
 
     Animator anim;
     float timer;
@@ -51,16 +57,44 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         if (LeftDirection == true)
         {
-            Instantiate(foodBullet1, transform.position, Quaternion.identity);
-            Instantiate(foodBullet2, transform.position, Quaternion.identity);
-            Instantiate(foodBullet3, transform.position, Quaternion.identity);
+            float randoBullet1 = Random.Range(0, 1000);
+            if (randoBullet1 <= 998)
+                Instantiate(foodBullet1, transform.position, Quaternion.identity);
+            else
+                Instantiate(specialBullet1, transform.position, Quaternion.identity);
+
+            float randoBullet2 = Random.Range(0, 1000);
+            if (randoBullet2 <= 998)
+                Instantiate(foodBullet2, transform.position, Quaternion.identity);
+            else
+                Instantiate(specialBullet2, transform.position, Quaternion.identity);
+
+            float randoBullet3 = Random.Range(0, 1000);
+            if (randoBullet3 <= 998)
+                Instantiate(foodBullet3, transform.position, Quaternion.identity);
+            else
+                Instantiate(specialBullet3, transform.position, Quaternion.identity);
         }
 
         else
         {
-            Instantiate(foodBullet4, transform.position, Quaternion.identity);
-            Instantiate(foodBullet5, transform.position, Quaternion.identity);
-            Instantiate(foodBullet6, transform.position, Quaternion.identity);
+            float randoBullet4 = Random.Range(0, 1000);
+            if (randoBullet4 <= 998)
+                Instantiate(foodBullet4, transform.position, Quaternion.identity);
+            else
+                Instantiate(specialBullet4, transform.position, Quaternion.identity);
+
+            float randoBullet5 = Random.Range(0, 1000);
+            if (randoBullet5 <= 998)
+                Instantiate(foodBullet5, transform.position, Quaternion.identity);
+            else
+                Instantiate(specialBullet5, transform.position, Quaternion.identity);
+
+            float randoBullet6 = Random.Range(0, 1000);
+            if (randoBullet6 <= 998)
+                Instantiate(foodBullet6, transform.position, Quaternion.identity);
+            else
+                Instantiate(specialBullet6, transform.position, Quaternion.identity);
         }
     }
 }
