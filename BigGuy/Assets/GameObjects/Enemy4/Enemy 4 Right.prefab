@@ -167,7 +167,7 @@ MonoBehaviour:
     type: 2}
   foodBullet5: {fileID: 1724141270401996, guid: 8cf8dd471b7c3f44986e05b8c96b566b,
     type: 2}
-  foodBullet6: {fileID: 1724141270401996, guid: 314e9db9d6cd7994b8be01218828b11d,
+  foodBullet6: {fileID: 1724141270401996, guid: dbb6ae5a775cefe40bcb51f14e24f72b,
     type: 2}
 --- !u!212 &212094520465917878
 SpriteRenderer:
