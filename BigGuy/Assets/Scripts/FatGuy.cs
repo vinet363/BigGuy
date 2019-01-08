@@ -112,7 +112,6 @@ public class FatGuy : MonoBehaviour
 
             currentDeflect = Instantiate(prefabDeflect, transform.position + currentDisplace, Quaternion.identity);
             
-
             deflectTimer = deflectTime;
         }
     }

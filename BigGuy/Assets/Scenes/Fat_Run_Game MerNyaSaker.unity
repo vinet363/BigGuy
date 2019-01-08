@@ -332,7 +332,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1000
+  m_Text: 0
 --- !u!222 &83901273
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4630,7 +4630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shader: {fileID: 4800000, guid: 6b426a8c366d0584dadb551db862ddeb, type: 3}
   AutomaticPhase: 1
-  Phase: 2.5460012
+  Phase: 3.420385
   ConvertToGrayscale: 0
   NoiseIntensity: 0.222
   ScanlinesIntensity: 0.22

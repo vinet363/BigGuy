@@ -32,6 +32,5 @@ public class GameManager : MonoBehaviour
             if(highScore)
                 highScore.text = totalScore.ToString();
         }
-
     }
 }

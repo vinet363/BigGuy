@@ -339,10 +339,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf077514e507e0d4abde45684dbd0883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 1
-  spawnMin: 4
-  spawnMax: 8
-  Enemy1: {fileID: 1048776487042472, guid: 3ea55014218e484479f95ca1dfee6bde, type: 2}
+  timer1: 1
+  timer2: 1
+  timeReduction: 1
+  enemyUpCountdown: 30
+  spawnTimeMin: 4
+  spawnTimeMax: 8
+  Enemy1Left: {fileID: 0}
+  Enemy2Left: {fileID: 0}
+  Enemy3Left: {fileID: 0}
+  Enemy4Left: {fileID: 0}
+  Enemy1Right: {fileID: 0}
+  Enemy2Right: {fileID: 0}
+  Enemy3Right: {fileID: 0}
+  Enemy4Right: {fileID: 0}
   SideWalk1: {x: -3.8, y: 6}
   SideWalk2: {x: 3.8, y: 6}
 --- !u!4 &361483428
@@ -755,6 +765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: {fileID: 83901272}
+  highScore: {fileID: 0}
 --- !u!4 &913096507
 Transform:
   m_ObjectHideFlags: 0
