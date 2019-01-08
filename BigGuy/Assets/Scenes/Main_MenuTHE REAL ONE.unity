@@ -9576,7 +9576,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1000
+  m_Text: 0
 --- !u!222 &83901273
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9715,6 +9715,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1695e43e34b754408ed8f886f6ca91c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 2
+  amount: 2
+  removeAmount: 0.1
 --- !u!1 &123979140
 GameObject:
   m_ObjectHideFlags: 0
@@ -77288,7 +77291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shader: {fileID: 4800000, guid: 6b426a8c366d0584dadb551db862ddeb, type: 3}
   AutomaticPhase: 1
-  Phase: 5.4754953
+  Phase: 5.596959
   ConvertToGrayscale: 0
   NoiseIntensity: 0.222
   ScanlinesIntensity: 0.74
