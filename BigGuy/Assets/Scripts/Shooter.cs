@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,4 +27,4 @@ public class Shooter : MonoBehaviour
         currentDisplace = new Vector3(xValue, yValue, 0f);
         currentShotLocation = Instantiate(Bullet_1, transform.position + currentDisplace, Quaternion.identity);
     }
-}
+}*/

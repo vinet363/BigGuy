@@ -169,6 +169,18 @@ MonoBehaviour:
     type: 2}
   foodBullet6: {fileID: 1724141270401996, guid: f1fc09fe445e6b342bec899a69a20419,
     type: 2}
+  specialBullet1: {fileID: 1724141270401996, guid: 672d061b413fdea44ac1daccf27ab5c2,
+    type: 2}
+  specialBullet2: {fileID: 1724141270401996, guid: b5ef027382e7eef48a043b35f8f97beb,
+    type: 2}
+  specialBullet3: {fileID: 1724141270401996, guid: 590db3e5c57e3bc4aad4b377cd721b7a,
+    type: 2}
+  specialBullet4: {fileID: 1724141270401996, guid: c0d027ada3673d543892a0ea5c04655d,
+    type: 2}
+  specialBullet5: {fileID: 1724141270401996, guid: 06ca1520525b388409a368c90766dd65,
+    type: 2}
+  specialBullet6: {fileID: 1724141270401996, guid: 7cb370c42cee7d3489a64f5a00c085a2,
+    type: 2}
 --- !u!212 &212094520465917878
 SpriteRenderer:
   m_ObjectHideFlags: 1
