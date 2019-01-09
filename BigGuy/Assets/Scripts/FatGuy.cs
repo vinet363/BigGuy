@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using EZCameraShake;
 
 public class FatGuy : MonoBehaviour
@@ -23,6 +22,8 @@ public class FatGuy : MonoBehaviour
     [SerializeField] GameObject prefabDeflect;
     [SerializeField] Image FoodBar;
     [SerializeField] Sprite dead;
+    [SerializeField] GameObject playerDieStarve;
+    [SerializeField] GameObject playerDieExplode;
 
     int health;
     float timer;
@@ -165,9 +166,15 @@ public class FatGuy : MonoBehaviour
     void Dead()
     {
         //Check if the health is gone
-        if (health <= 0 || health >= maxHealth)
+        if (health <= 0)
         {
-            SceneManager.LoadScene("Main_MenuTHE REAL ONE");
+            Instantiate(playerDieStarve, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+        if (health >= maxHealth)
+        {
+            Instantiate(playerDieExplode, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 

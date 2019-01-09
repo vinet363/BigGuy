@@ -17,6 +17,10 @@ public class StartButton : MonoBehaviour
     IEnumerator ButtonSpawn()
     {
         yield return new WaitForSeconds(0.01f);
+
+        if (m_EventSystem == null)
+            m_EventSystem = EventSystem.current;
+
         m_EventSystem.SetSelectedGameObject(startButton);
     }
 }

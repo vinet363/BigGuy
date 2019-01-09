@@ -352,7 +352,6 @@ GameObject:
   - component: {fileID: 105989643}
   - component: {fileID: 105989647}
   - component: {fileID: 105989646}
-  - component: {fileID: 105989648}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -445,20 +444,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: abfe3f21c1fe16445b9d9c61b985890c, type: 2}
---- !u!114 &105989648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 105989642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1695e43e34b754408ed8f886f6ca91c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 2
-  amount: 2
-  removeAmount: 0.1
 --- !u!1 &123979140
 GameObject:
   m_ObjectHideFlags: 0
@@ -2257,6 +2242,18 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114058646249874120, guid: b23b53e60be9fc548b1ddac91cf32925,
+        type: 2}
+      propertyPath: playerDieStarve
+      value: 
+      objectReference: {fileID: 1248165713042228, guid: 92113109a822cbb40a8fc2afd5727c06,
+        type: 2}
+    - target: {fileID: 114058646249874120, guid: b23b53e60be9fc548b1ddac91cf32925,
+        type: 2}
+      propertyPath: playerDieExplode
+      value: 
+      objectReference: {fileID: 1248165713042228, guid: de89994110d09b84b86983054f709fec,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b23b53e60be9fc548b1ddac91cf32925, type: 2}
   m_IsPrefabAsset: 0
@@ -4630,7 +4627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shader: {fileID: 4800000, guid: 6b426a8c366d0584dadb551db862ddeb, type: 3}
   AutomaticPhase: 1
-  Phase: 3.420385
+  Phase: 1.1163769
   ConvertToGrayscale: 0
   NoiseIntensity: 0.222
   ScanlinesIntensity: 0.22
