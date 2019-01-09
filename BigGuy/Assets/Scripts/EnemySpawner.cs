@@ -61,7 +61,7 @@ public class EnemySpawner : MonoBehaviour
     void SpawnLeft()
     {
         Vector3 spawnPosition = SideWalk1;
-        int randomSpawn = Random.Range(0, 3);
+        int randomSpawn = Random.Range(0, 4);
         if (randomSpawn == 0)
             Instantiate(Enemy1Left, spawnPosition, Quaternion.identity);
         else if (randomSpawn == 1)
@@ -75,7 +75,7 @@ public class EnemySpawner : MonoBehaviour
     void SpawnRight()
     {
         Vector3 spawnPosition = SideWalk2;
-        int randomSpawn2 = Random.Range(0, 3);
+        int randomSpawn2 = Random.Range(0, 4);
         if (randomSpawn2 == 0)
             Instantiate(Enemy1Right, spawnPosition, Quaternion.identity);
         else if (randomSpawn2 == 1)
