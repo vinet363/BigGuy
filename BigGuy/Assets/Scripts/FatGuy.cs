@@ -167,7 +167,7 @@ public class FatGuy : MonoBehaviour
         //Check if the health is gone
         if (health <= 0 || health >= maxHealth)
         {
-            SceneManager.LoadScene("Game_Over");
+            SceneManager.LoadScene("Main_MenuTHE REAL ONE");
         }
     }
 
