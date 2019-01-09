@@ -24,6 +24,8 @@ public class FatGuy : MonoBehaviour
     [SerializeField] Sprite dead;
     [SerializeField] GameObject playerDieStarve;
     [SerializeField] GameObject playerDieExplode;
+    [SerializeField] GameObject foodEat;
+        
 
     int health;
     float timer;
@@ -200,8 +202,8 @@ public class FatGuy : MonoBehaviour
         {
             Destroy(col.gameObject);
             health += 5;
+            Instantiate(foodEat, transform.position, Quaternion.identity);
             CameraShaker.Instance.ShakeOnce(1f, 5f, 0f, 0.5f);
-            //SplitRGB();
         }
         else if (col.gameObject.tag == "SpecialFood")
         {

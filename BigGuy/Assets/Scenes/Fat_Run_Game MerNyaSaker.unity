@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 105989643}
   - component: {fileID: 105989647}
   - component: {fileID: 105989646}
+  - component: {fileID: 105989648}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -444,6 +445,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: abfe3f21c1fe16445b9d9c61b985890c, type: 2}
+--- !u!95 &105989648
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 105989642}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &123979140
 GameObject:
   m_ObjectHideFlags: 0
@@ -2253,6 +2272,17 @@ Prefab:
       propertyPath: playerDieExplode
       value: 
       objectReference: {fileID: 1248165713042228, guid: de89994110d09b84b86983054f709fec,
+        type: 2}
+    - target: {fileID: 114058646249874120, guid: b23b53e60be9fc548b1ddac91cf32925,
+        type: 2}
+      propertyPath: cameraEffect
+      value: 
+      objectReference: {fileID: 105989642}
+    - target: {fileID: 114058646249874120, guid: b23b53e60be9fc548b1ddac91cf32925,
+        type: 2}
+      propertyPath: foodEat
+      value: 
+      objectReference: {fileID: 1960699299220244, guid: 544c0fb9c3e441740aad4c4f5998a3ad,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b23b53e60be9fc548b1ddac91cf32925, type: 2}
@@ -4627,7 +4657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shader: {fileID: 4800000, guid: 6b426a8c366d0584dadb551db862ddeb, type: 3}
   AutomaticPhase: 1
-  Phase: 1.1163769
+  Phase: 7.4938936
   ConvertToGrayscale: 0
   NoiseIntensity: 0.222
   ScanlinesIntensity: 0.22
