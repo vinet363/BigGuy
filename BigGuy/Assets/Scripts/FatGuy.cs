@@ -8,6 +8,7 @@ public class FatGuy : MonoBehaviour
 {
     [SerializeField] int maxHealth = 10;
     [SerializeField] int startingHealth = 10;
+    [SerializeField] int decreaseHealth = 1;
     [SerializeField] int scorePerSecond = 0;
     [SerializeField] int multiplyer = 10;
     [SerializeField] float maxTimer = 1f;
@@ -159,7 +160,7 @@ public class FatGuy : MonoBehaviour
     //The hunger bar shrinks with deltaTime
     void Hunger()
     {
-            health = health - 1;
+            health = health - decreaseHealth;
     }
 
     //Tells the game what to do when it reaches too high or too low on the hunger meter
