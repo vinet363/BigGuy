@@ -58,19 +58,19 @@ public class Enemy : MonoBehaviour
         if (LeftDirection == true)
         {
             float randoBullet1 = Random.Range(0, 1000);
-            if (randoBullet1 <= 998)
+            if (randoBullet1 <= 999)
                 Instantiate(foodBullet1, transform.position, Quaternion.identity);
             else
                 Instantiate(specialBullet1, transform.position, Quaternion.identity);
 
             float randoBullet2 = Random.Range(0, 1000);
-            if (randoBullet2 <= 998)
+            if (randoBullet2 <= 999)
                 Instantiate(foodBullet2, transform.position, Quaternion.identity);
             else
                 Instantiate(specialBullet2, transform.position, Quaternion.identity);
 
             float randoBullet3 = Random.Range(0, 1000);
-            if (randoBullet3 <= 998)
+            if (randoBullet3 <= 999)
                 Instantiate(foodBullet3, transform.position, Quaternion.identity);
             else
                 Instantiate(specialBullet3, transform.position, Quaternion.identity);
@@ -79,19 +79,19 @@ public class Enemy : MonoBehaviour
         else
         {
             float randoBullet4 = Random.Range(0, 1000);
-            if (randoBullet4 <= 998)
+            if (randoBullet4 <= 999)
                 Instantiate(foodBullet4, transform.position, Quaternion.identity);
             else
                 Instantiate(specialBullet4, transform.position, Quaternion.identity);
 
             float randoBullet5 = Random.Range(0, 1000);
-            if (randoBullet5 <= 998)
+            if (randoBullet5 <= 999)
                 Instantiate(foodBullet5, transform.position, Quaternion.identity);
             else
                 Instantiate(specialBullet5, transform.position, Quaternion.identity);
 
             float randoBullet6 = Random.Range(0, 1000);
-            if (randoBullet6 <= 998)
+            if (randoBullet6 <= 999)
                 Instantiate(foodBullet6, transform.position, Quaternion.identity);
             else
                 Instantiate(specialBullet6, transform.position, Quaternion.identity);

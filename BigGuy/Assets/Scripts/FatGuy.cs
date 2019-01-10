@@ -80,8 +80,6 @@ public class FatGuy : MonoBehaviour
 
         //Checks if you are dead
         Dead();
-        if (Input.GetKeyDown(KeyCode.P))
-            health = health + 5;
 
         HandleDeflect();
     }
