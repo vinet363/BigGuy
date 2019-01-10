@@ -2284,6 +2284,12 @@ Prefab:
       value: 
       objectReference: {fileID: 1960699299220244, guid: 544c0fb9c3e441740aad4c4f5998a3ad,
         type: 2}
+    - target: {fileID: 114058646249874120, guid: b23b53e60be9fc548b1ddac91cf32925,
+        type: 2}
+      propertyPath: prefabDeflectL
+      value: 
+      objectReference: {fileID: 1567215276191294, guid: 8479ef4c824fbbd408f14ce53409471b,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b23b53e60be9fc548b1ddac91cf32925, type: 2}
   m_IsPrefabAsset: 0
@@ -4657,7 +4663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shader: {fileID: 4800000, guid: 6b426a8c366d0584dadb551db862ddeb, type: 3}
   AutomaticPhase: 1
-  Phase: 7.4938936
+  Phase: 8.805122
   ConvertToGrayscale: 0
   NoiseIntensity: 0.222
   ScanlinesIntensity: 0.22

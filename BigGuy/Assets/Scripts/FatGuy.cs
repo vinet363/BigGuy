@@ -21,6 +21,7 @@ public class FatGuy : MonoBehaviour
     [SerializeField] float yMax = 2f;
     [SerializeField] Vector3 deflectDisplace;
     [SerializeField] GameObject prefabDeflect;
+    [SerializeField] GameObject prefabDeflectL;
     [SerializeField] Image FoodBar;
     [SerializeField] Sprite dead;
     [SerializeField] GameObject playerDieStarve;
@@ -36,6 +37,7 @@ public class FatGuy : MonoBehaviour
     float deflectCooldownTimer;
     bool itsDead = false;
     GameObject currentDeflect;
+    GameObject currentDeflectL;
     Animator anim; // TA INTE BORT  ANIMATIONER GUBBE
     
     // Use this for initialization
@@ -59,8 +61,11 @@ public class FatGuy : MonoBehaviour
         //Takes in the directions on the stick and moves the character accordingly
         Movement();
 
-        if(Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
+        {
             Deflect();
+            //DeflectL();
+        }
 
         //For making sure you don't go of screen
         StayOnScreen();
@@ -106,17 +111,44 @@ public class FatGuy : MonoBehaviour
             {
                 Destroy(currentDeflect);
                 currentDeflect = null;
+                Destroy(currentDeflectL);
+                currentDeflectL = null;
             }
 
             Vector3 currentDisplace = new Vector3();
 
             currentDisplace = new Vector3(-deflectDisplace.x, deflectDisplace.y, 0f);
 
-            currentDeflect = Instantiate(prefabDeflect, transform.position + currentDisplace, Quaternion.identity);
-            
+            currentDeflect = Instantiate(prefabDeflect, transform.position, Quaternion.identity);
+
+            currentDeflectL = Instantiate(prefabDeflectL, transform.position, Quaternion.identity);
+
             deflectTimer = deflectTime;
         }
     }
+
+    /*void DeflectL()
+    {
+        if (deflectCooldownTimer <= 0f)
+        {
+            Debug.Log("hh");
+            deflectCooldownTimer = deflectCooldown;
+
+            if (currentDeflectL != null)
+            {
+                Destroy(currentDeflectL);
+                currentDeflectL = null;
+            }
+
+            Vector3 currentDisplace = new Vector3();
+
+            currentDisplace = new Vector3(deflectDisplace.x, deflectDisplace.y, 0f);
+
+            currentDeflectL = Instantiate(prefabDeflectL, transform.position + currentDisplace, Quaternion.identity);
+
+            deflectTimer = deflectTime;
+        }
+    }*/
 
     //Removes the Deflect from the screen and make the cooldown
     void HandleDeflect()
@@ -128,8 +160,22 @@ public class FatGuy : MonoBehaviour
         {
             Destroy(currentDeflect);
             currentDeflect = null;
+            Destroy(currentDeflectL);
+            currentDeflectL = null;
         }
     }
+
+    /*void HandleDeflectL()
+    {
+        deflectTimer -= Time.deltaTime;
+        deflectCooldownTimer -= Time.deltaTime;
+
+        if (deflectTimer <= 0f && currentDeflectL != null)
+        {
+            Destroy(currentDeflectL);
+            currentDeflectL = null;
+        }
+    }*/
 
     //Keep the player on the screen
     void StayOnScreen()
