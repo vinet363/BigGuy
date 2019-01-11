@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9551ec95517ba48932c01a062adab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTimer: 2.3
+  shootTimer: 2.5
   selfDestruct: 12
   LeftDirection: 1
   foodBullet1: {fileID: 1724141270401996, guid: 219d13fc16df3fe4b8bbe69724d9c4a5,

@@ -110,10 +110,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   startingHealth: 25
+  decreaseHealth: 1
   scorePerSecond: 10
   multiplyer: 10
-  maxTimer: 1
-  deflectCooldown: 5
+  maxTimer: 0.5
+  deflectCooldown: 2
   deflectTime: 1
   speed: 5
   xMin: -3
@@ -123,6 +124,7 @@ MonoBehaviour:
   deflectDisplace: {x: -0.5, y: 1, z: 0}
   prefabDeflect: {fileID: 1567215276191294, guid: 558048416d63db14e8ea2355e9afac93,
     type: 2}
+  prefabDeflectL: {fileID: 0}
   FoodBar: {fileID: 0}
   dead: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   playerDieStarve: {fileID: 0}
