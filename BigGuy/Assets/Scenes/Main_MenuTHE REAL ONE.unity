@@ -52527,6 +52527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1538028249}
+  - component: {fileID: 1538028250}
   m_Layer: 5
   m_Name: ButtonsCollider
   m_TagString: Untagged
@@ -52556,6 +52557,24 @@ RectTransform:
   m_AnchoredPosition: {x: -89, y: -51}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1538028250
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1538028248}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 292ea33024c872f4bb6aa6adfd5e282b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1547377278
 GameObject:
   m_ObjectHideFlags: 0
@@ -77291,7 +77310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shader: {fileID: 4800000, guid: 6b426a8c366d0584dadb551db862ddeb, type: 3}
   AutomaticPhase: 1
-  Phase: 5.596959
+  Phase: 6.752346
   ConvertToGrayscale: 0
   NoiseIntensity: 0.222
   ScanlinesIntensity: 0.74
